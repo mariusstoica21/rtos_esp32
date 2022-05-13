@@ -46,7 +46,7 @@ The connection thread is running permanently. When a button is pressed, for exam
   </tr>
   <tr>
     <td>Arduino</td>
-    <td>C</td>
+    <td>C++</td>
     <td>Program that generates the webpage and reads/writes information from/to peripherals.</td>
     <td>WiFi_ESP32.ino</td>
     <td>
