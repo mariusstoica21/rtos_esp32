@@ -81,4 +81,115 @@ The connection thread is running permanently. When a button is pressed, for exam
 - Check for the IP address in the Serial Monitor.
 - Open a blank webpage and write the address from the Serial Monitor (for example 192.168.1.4).
 
+## Tutorial
+
+### Turn LED OFF
+
+**Website point of view**: the message 'OFF' will be shown on the top of the page, on the "LCD display", and the circuit of the ESP32 and a led will be shown on the bottom of the page.
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/1.JPG"
+  >
+</p>
+
+**Physical point of view**: the ESP32 builtin led will be turned off, and on the LCD display, the message "OFF" will be displayed.
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/6p.JPG"
+  >
+</p>
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/5p.JPG"
+  >
+</p>
+
+### Turn LED ON
+
+**Website point of view**: the message 'ON' will be shown on the top of the page, on the "LCD display", and the circuit of the ESP32 and a led will be shown on the bottom of the page.
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/2.JPG"
+  >
+</p>
+
+**Physical point of view**: the ESP32 builtin led will be turned on, and on the LCD display, the message "ON" will be displayed.
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/8p.JPG"
+  >
+</p>
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/7p.JPG"
+  >
+</p>
+
+### Check GAS sensor
+
+**Website point of view**: the message 'No gas detected' will be shown on the top of the page, on the "LCD display", if the value read from the analog pin is below a given threshold; if the module senses gas, the message "GAS DETECTED!!!" will be shown; the circuit of the ESP32 and a MQ sensor will be shown on the bottom of the page.
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/3.JPG"
+  >
+</p>
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/4.JPG"
+  >
+</p>
+
+**Physical point of view**: the LCD display will show either "No gas detected" or "GAS DETECTED!!!"
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/1p.JPG"
+  >
+</p>
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/2p.JPG"
+  >
+</p>
+
+### Check PIR sensor
+
+**Website point of view**: the message 'No motion' will be shown on the top of the page, on the "LCD display", if the PIR sensor does not detect any movement; if the module senses motion, the message "MOTION DETECTED!!!" will be shown; the circuit of the ESP32 and a PIR sensor will be shown on the bottom of the page.
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/5.JPG"
+  >
+</p>
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/6.JPG"
+  >
+</p>
+
+**Physical point of view**: the LCD display will show either "No motion" or "MOTION DETECTED!!!"
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/4p.JPG"
+  >
+</p>
+
+<p align="center">
+  <img 
+    src="https://github.com/mariusstoica21/rtos_esp32/blob/main/Images/3p.JPG"
+  >
+</p>
+
+
 
