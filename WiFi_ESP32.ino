@@ -8,17 +8,21 @@ static const BaseType_t app_cpu = 0;
 #else
 static const BaseType_t app_cpu = 1;
 #endif
- 
-const char* ssid     = "netis";
-const char* password = "password";
+
+
+//Add network hostname and password
+const char* ssid     = "";
+const char* password = "";
 
 WiFiServer server(80);
 
+//thread handle
 static TaskHandle_t task_1 = NULL;
 static TaskHandle_t task_2 = NULL;
 static TaskHandle_t task_3 = NULL;
 static TaskHandle_t task_4 = NULL;
 
+//global variables
 static int ledState = 0;
 static String message = "OFF";
 static int gasValue = 0;
@@ -29,6 +33,7 @@ static int action = 0;
 const int gasPin = 34;
 const int pirPin = 35;                 
 
+//callback function for turning a led on/off
 void onOffLed(void* parameter)
 {
 
@@ -39,6 +44,7 @@ void onOffLed(void* parameter)
   }
 }
 
+//callback function for displaying messages on the LCD display
 void printMessage(void* parameter)
 {
 
@@ -52,6 +58,7 @@ void printMessage(void* parameter)
   }
 }
 
+//callback function for reading data from gas sensor
 void readGas(void* parameter)
 {
 
@@ -61,6 +68,7 @@ void readGas(void* parameter)
   }
 }
 
+//callback function for reading data from PIR sensor
 void readPir(void* parameter)
 {
 
@@ -104,7 +112,9 @@ void setup()
     Serial.println(WiFi.localIP());
     
     server.begin();
-
+	
+	
+	//create tasks/threads
     xTaskCreatePinnedToCore(
       onOffLed,
       "Task 1",
@@ -140,6 +150,7 @@ void setup()
         &task_4,
         app_cpu);
 
+//tasks 3 and 4 (reading from sensors) are suspended and will resume iff the according button is pressed
   vTaskSuspend(task_3);
   vTaskSuspend(task_4);
 
