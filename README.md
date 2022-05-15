@@ -20,7 +20,7 @@ The connection thread is running permanently. When a button is pressed, for exam
 
 ✅ Additional hardware needed
 
-✅ Video available
+✅ [Video available](https://youtu.be/cDgX18h4W08)
 
 ❌ Documentation
 
